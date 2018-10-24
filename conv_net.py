@@ -16,7 +16,7 @@ def main():
 	arch_number = 3
 
 	#which dataset to use
-	filename = 'concatenated_10.csv'
+	filename = 'concatenated_100.csv'
 
 	#read in the csv file and prepare data for classification
 	x_train,x_test,y_train,y_test = read_and_preprocess_data(filename)
@@ -118,9 +118,9 @@ def read_and_preprocess_data(filename):
 	#grab the labels from 
 	labels = data['Labels']
 	new_labels = []
-	print 'Number of 1\'s: '+len([x for x in labels if x == 1])
-	print 'Number of 0\'s: '+len([x for x in labels if x == 0])
-	print 'total length: '+len(labels)
+	print 'Number of 1\'s: '+str(len([x for x in labels if x == 1]))
+	print 'Number of 0\'s: '+str(len([x for x in labels if x == 0]))
+	print 'total length: '+str(len(labels))
 	features = []
 	#split each nucleotide string into a vector of nucleotides
 	for sequence in data['0'].values:
